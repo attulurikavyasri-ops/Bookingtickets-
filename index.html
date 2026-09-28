@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookMyShow Style - Seat Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">book<span>my</span>show</div>
+    <div class="location">📍 Chittoor</div>
+  </header>
+
+  <main class="container">
+    <section class="movie-card">
+      <div class="poster">🎬</div>
+      <div>
+        <h1>Movie Night</h1>
+        <p>Today • 7:30 PM • Screen 1</p>
+        <p class="muted">Select your seats and confirm your booking.</p>
+      </div>
+    </section>
+
+    <section class="booking">
+      <h2>Select Seats</h2>
+      <div class="screen">SCREEN</div>
+
+      <div class="seat-map" id="seatMap"></div>
+
+      <div class="legend">
+        <span><i class="seat available"></i> Available</span>
+        <span><i class="seat selected"></i> Selected</span>
+        <span><i class="seat occupied"></i> Occupied</span>
+      </div>
+
+      <div class="summary">
+        <div>
+          <strong>Selected:</strong>
+          <span id="selectedSeats">None</span>
+        </div>
+        <div>
+          <strong>Total:</strong>
+          <span id="total">₹0</span>
+        </div>
+      </div>
+
+      <button id="bookBtn" disabled>Book Tickets</button>
+      <p id="message" class="message"></p>
+    </section>
+  </main>
+
+  <div id="successModal" class="modal hidden">
+    <div class="modal-content">
+      <div class="success-icon">✓</div>
+      <h2>Booking Successful!</h2>
+      <p id="confirmation"></p>
+      <button id="closeBtn">Close Window</button>
+      <p class="small">
+        Browsers only allow JavaScript to close a window that was opened by script.
+        If this page was opened normally, the button will explain what to do.
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
